@@ -26,7 +26,7 @@ public class ReceiverLearnActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                scheduleNotification (getNotification("4 second delay") , 4000);
+                scheduleNotification (getNotification("6 second delay") , 6000);
             }
         });
     }

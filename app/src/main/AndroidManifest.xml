@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="simplycodinghub.learnandroidapp">
-
     <!-- This permissions are neccessary for broadcast receiver -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-
-<!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-feature android:name="android.hardware.location.gps" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
 
     <application
         android:allowBackup="true"
@@ -20,21 +13,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".FastInternetCheckLearn.Main11Activity">
+        <activity android:name=".NamazTime.Main12Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".RecyclerViewTutorial.Main10Activity">
-
-        </activity>
-        <activity android:name=".RegisterRetrofit.Main9Activity"></activity>
+        <activity android:name=".FastInternetCheckLearn.Main11Activity"></activity>
+        <activity android:name=".RecyclerViewTutorial.Main10Activity"></activity>
+        <activity android:name=".RegisterRetrofit.Main9Activity" />
         <activity android:name=".BroadcastActivity.SecondActivity" />
         <activity android:name=".BroadcastActivity.Main8Activity" />
-        <activity android:name=".BroadcastReceiverNotificationLearn.ReceiverLearnActivity" />
+        <activity android:name=".BroadcastReceiverNotificationLearn.ReceiverLearnActivity">
+
+        </activity>
         <activity android:name=".ServiceLearn.LearnServiceActivity" />
 
         <meta-data
@@ -50,18 +43,15 @@
             android:name=".RecyclerViewTutorial.Main4Activity"
             android:launchMode="singleTask" />
         <activity android:name=".SearchLocation.Main3Activity" />
-        <activity android:name=".LifecycleLearn.MainActivity" >
-
-        </activity>
+        <activity android:name=".LifecycleLearn.MainActivity"></activity>
         <activity android:name=".Main2Activity" />
 
         <service android:name=".ServiceLearn.MyService" />
 
-          <receiver
-             android:name=".BroadcastActivity.AlarmReceiver"
-             android:process=":remote" />
-         <receiver android:name=".BroadcastReceiverNotificationLearn.MyNotificationPublisher" />
-        <!-- Broadcast receiver declaration in manifest file and make sure to enable it -->
+        <receiver
+            android:name=".BroadcastActivity.AlarmReceiver"
+            android:process=":remote" />
+        <receiver android:name=".BroadcastReceiverNotificationLearn.MyNotificationPublisher" />
     </application>
 
 </manifest>
