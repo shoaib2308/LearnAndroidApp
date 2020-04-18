@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
 
-public class AlarmReceiver extends BroadcastReceiver {
+public class AlarmReceiverr extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {

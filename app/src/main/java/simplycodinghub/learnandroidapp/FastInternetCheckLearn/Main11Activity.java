@@ -35,14 +35,16 @@ public class Main11Activity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         // Create an IntentFilter instance.
-        IntentFilter intentFilter = new IntentFilter();
 
+        //// Intent filter are used for broadcast receiver. ... An intent is an object that can
+        // hold the os or other app activity and its data in uri form.It is started using startActivity(intent-obj).. \n
+        // whereas IntentFilter can fetch activity information on os or other app activities.
+
+        IntentFilter intentFilter = new IntentFilter();
         // Add network connectivity change action.
         intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
-
         // Register the broadcast receiver with the intent filter object.
         registerReceiver(myInternetConnectionReceiver, intentFilter);
-
     }
 
     @Override

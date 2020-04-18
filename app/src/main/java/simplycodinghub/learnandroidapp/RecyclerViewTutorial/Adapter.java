@@ -17,7 +17,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     List<GetListResponse> getListResponses = new ArrayList<>();
     Context context;
-
+    simplycodinghub.learnandroidapp.singularityautomation.onClickInterface onClickInterface;
     public Adapter(Context context,List<GetListResponse> getListResponses) {
         this.getListResponses = getListResponses;
         this.context = context;
@@ -32,9 +32,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Adapter.ViewHolder holder, int position) {
-        GetListResponse getListResponse =  getListResponses.get(position);
+    public void onBindViewHolder(@NonNull Adapter.ViewHolder holder, final int position) {
+        final GetListResponse getListResponse =  getListResponses.get(position);
         holder.textView.setText(getListResponse.getJobId());
+
     }
 
     @Override

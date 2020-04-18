@@ -24,14 +24,17 @@ public class Main10Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main10);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.programmableList);
+
+
 
         adapter = new Adapter(Main10Activity.this, getListResponses);
-
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.programmableList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
         getList();
+
+
     }
 
     public void getList() {
@@ -50,5 +53,9 @@ public class Main10Activity extends AppCompatActivity {
         });
     }
 
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getList();
+    }
 }

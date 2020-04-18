@@ -15,10 +15,13 @@ private MediaPlayer player;
     }
     @Override
     public void onCreate() {
+        //onCreate() is called when the Service object is instantiated (ie: when the service is created).
         Toast.makeText(this, "Service was Created", Toast.LENGTH_LONG).show();
     }
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        //onStartCommand() is called every time a client starts the service using startService(Intent intent).
+        // This means that onStartCommand() can get called multiple times.
         player = MediaPlayer.create(this, Settings.System.DEFAULT_RINGTONE_URI);
         // This will play the ringtone continuously until we stop the service.
         player.setLooping(true);

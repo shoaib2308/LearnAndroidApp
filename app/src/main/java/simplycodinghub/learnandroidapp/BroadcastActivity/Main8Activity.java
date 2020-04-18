@@ -111,7 +111,7 @@ public class Main8Activity extends AppCompatActivity {
 
         Toast.makeText(Main8Activity.this,""+cal.getTime(),Toast.LENGTH_LONG).show();
 
-        Intent intent = new Intent(getBaseContext(), AlarmReceiver.class);
+        Intent intent = new Intent(getBaseContext(), AlarmReceiverr.class);
         intent.putExtra("KEY_TONE_URL", passString);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(
                 getBaseContext(),

@@ -3,6 +3,8 @@ package simplycodinghub.learnandroidapp.NamazTime;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class TimeResponse {
     @SerializedName("title")
     @Expose
@@ -31,7 +33,10 @@ public class TimeResponse {
     @SerializedName("sealevel")
     @Expose
     private String sealevel;
-
+    @SerializedName("today_weather")
+    @Expose
+    private TodayWeather todayWeather;
+    @SerializedName("link")
     @Expose
     private String link;
     @SerializedName("qibla_direction")
@@ -61,7 +66,10 @@ public class TimeResponse {
     @SerializedName("country_code")
     @Expose
     private String countryCode;
-
+    @SerializedName("items")
+    @Expose
+    private List<Item> items = null;
+    @SerializedName("status_valid")
     @Expose
     private Integer statusValid;
     @SerializedName("status_code")
@@ -143,6 +151,14 @@ public class TimeResponse {
         this.sealevel = sealevel;
     }
 
+    public TodayWeather getTodayWeather() {
+        return todayWeather;
+    }
+
+    public void setTodayWeather(TodayWeather todayWeather) {
+        this.todayWeather = todayWeather;
+    }
+
     public String getLink() {
         return link;
     }
@@ -221,6 +237,14 @@ public class TimeResponse {
 
     public void setCountryCode(String countryCode) {
         this.countryCode = countryCode;
+    }
+
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
     }
 
     public Integer getStatusValid() {

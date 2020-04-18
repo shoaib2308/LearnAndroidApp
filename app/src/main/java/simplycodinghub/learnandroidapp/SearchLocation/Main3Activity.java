@@ -56,14 +56,16 @@ public class Main3Activity extends AppCompatActivity {
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == request_code) {
             if (resultCode == RESULT_OK) {
                 Place place = Autocomplete.getPlaceFromIntent(data);
                 Log.i(TAG, "ManishPlace: " + place.getPhoneNumber());
 
                 txt_search.setText(place.getName() + ",\n" +
-                        place.getAddress() + "\n" + place.getPhoneNumber());
+                        place.getAddress() + "\n" + place.getAddress());
                 String location = place.toString();
+
 
                 System.out.println("manishshis" + location);
                 if (location != null && !location.equals("")) {
