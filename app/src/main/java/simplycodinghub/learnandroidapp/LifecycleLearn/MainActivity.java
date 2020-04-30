@@ -6,10 +6,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
 import simplycodinghub.learnandroidapp.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this,Main7Activity.class);
                 startActivity(i);
+                overridePendingTransition(R.anim.bottom_down,R.anim.bottom_top);
             }
         });
 

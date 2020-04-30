@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "31729737803",
+    "firebase_url": "https://learnandroidapp-54895.firebaseio.com",
+    "project_id": "learnandroidapp-54895",
+    "storage_bucket": "learnandroidapp-54895.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:31729737803:android:e0dbc746cee79718e16dce",
+        "android_client_info": {
+          "package_name": "simplycodinghub.learnandroidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "31729737803-privqqt746dtenq7viphsbg42qrik5m8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "simplycodinghub.learnandroidapp",
+            "certificate_hash": "ddef29f7e5d932f5d0f816121902f3f8adac3d0f"
+          }
+        },
+        {
+          "client_id": "31729737803-v8oalh4tcggjh9lpsdlkmlg7mf9c83sc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr0oq5sj3R8Q9XSGnht0it1cDtF2Xgx0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "31729737803-v8oalh4tcggjh9lpsdlkmlg7mf9c83sc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="simplycodinghub.learnandroidapp">
     <!-- This permissions are neccessary for broadcast receiver -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- FOR COMPASS -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -9,6 +11,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.VIBRATE" /> <!-- Permission to start Alarm on device reboot -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <application
         android:allowBackup="true"
@@ -18,16 +21,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".RecyclerViewVolley.Main19Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".LearnSocket.BothServerSideActivity"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".RegisterVolley.MainVolleyActivity">
+        <activity android:name=".LearnSocket.BothClientSideActivity"/>
 
-        </activity>
+        <activity android:name=".LearnSocket.ClientSideActivity"></activity>
+        <activity android:name=".LearnSocket.ServerSideActivity" />
+        <activity android:name=".QuickBroadcast.Main22Activity" />
+        <activity android:name=".FirebaseAnalytics.Main21Activity" />
+        <activity android:name=".LearnBluetoothConnection.Main20Activity" />
+        <activity android:name=".RecyclerViewVolley.Main19Activity" />
+        <activity android:name=".RegisterVolley.MainVolleyActivity" />
         <activity android:name=".SwipeViewPager.DetailActivity" />
         <activity android:name=".SwipeViewPager.Main18Activity" />
         <activity android:name=".singularityautomation.Main17Activity" />
@@ -46,7 +50,7 @@
         <activity
             android:name=".BroadcastReceiverNotificationLearn.ReceiverLearnActivity"
             android:launchMode="standard" />
-        <activity android:name=".ServiceLearn.LearnServiceActivity"></activity>
+        <activity android:name=".ServiceLearn.LearnServiceActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -61,7 +65,14 @@
             android:name=".RecyclerViewTutorial.Main4Activity"
             android:launchMode="singleTask" />
         <activity android:name=".SearchLocation.Main3Activity" />
-        <activity android:name=".LifecycleLearn.MainActivity" />
+        <activity android:name=".LifecycleLearn.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity android:name=".Main2Activity" /> <!-- Will not be called unless the application explicitly enables it -->
         <service android:name=".ServiceLearn.MyService" />
 
@@ -102,7 +113,18 @@
         <service
             android:name=".LearnAlarmMananger.DailyNotification.MyService2"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true" /> <!-- Declare Broadcast receiver -->
+        <receiver
+            android:name=".QuickBroadcast.MyReceiver"
+            android:enabled="true">
+            <intent-filter>
+
+                <!-- Intent filters for broadcast receiver -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

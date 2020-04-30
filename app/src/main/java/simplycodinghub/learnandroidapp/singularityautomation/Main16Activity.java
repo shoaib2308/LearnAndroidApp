@@ -38,14 +38,16 @@ public class Main16Activity extends AppCompatActivity {
                 Intent i = new Intent(Main16Activity.this, Main17Activity.class);
                 i.putExtra("id", roomId);
                 startActivity(i);
-                //adapter.notifyDataSetChanged();   // getListResponses.remove(abc);
+                overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+
+
             }
         };
 
         adapter = new Adapter(Main16Activity.this, dataListResponse, onClickInterface);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
-
+        //adapter.notifyDataSetChanged();   // getListResponses.remove(dataListResponse);
         Timestamp timestamp = new Timestamp(System.currentTimeMillis() / 1000L);
         long unixTime1 = timestamp.getTime();
         unixTime = Long.toString(unixTime1);

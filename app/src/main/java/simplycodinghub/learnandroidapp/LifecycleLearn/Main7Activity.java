@@ -8,10 +8,9 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
 import simplycodinghub.learnandroidapp.R;
 
-public class Main7Activity extends AppCompatActivity implements View.OnClickListener {
+public class Main7Activity extends BaseActivity implements View.OnClickListener {
 Button button;
     LinearLayout li_oneway;
     LinearLayout li_roundtrip;

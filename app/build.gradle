@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 
 android {
     dataBinding {
@@ -7,7 +9,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "simplycodinghub.learnandroidapp"
-        minSdkVersion 15
+        minSdkVersion 16
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
         targetSdkVersion 28
@@ -47,9 +49,20 @@ dependencies {
     implementation 'com.jakewharton:butterknife:7.0.1'
 
     //Volley
-    implementation 'com.android.volley:volley:1.0.0'
+    implementation 'com.android.volley:volley:1.1.0'
 
     //glide library
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    //Firebase Analytics
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    //kotlin
+    implementation "androidx.core:core-ktx:+"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+apply plugin: 'com.google.gms.google-services'
+repositories {
+    mavenCentral()
 }
