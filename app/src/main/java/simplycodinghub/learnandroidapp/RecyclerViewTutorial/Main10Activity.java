@@ -1,7 +1,10 @@
 package simplycodinghub.learnandroidapp.RecyclerViewTutorial;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,13 +45,26 @@ public class Main10Activity extends AppCompatActivity {
         service.getJobList().enqueue(new Callback<List<GetListResponse>>() {
             @Override
             public void onResponse(Call<List<GetListResponse>> call, Response<List<GetListResponse>> response) {
-                getListResponses.addAll(response.body());
-                adapter.notifyDataSetChanged();
+                if (response.isSuccessful()) {
+                    Toast.makeText(Main10Activity.this, "success", Toast.LENGTH_SHORT).show();
+                    getListResponses.addAll(response.body());
+                    adapter.notifyDataSetChanged();
+                }
+                else {
+                    Toast.makeText(Main10Activity.this, "Server returned an error", Toast.LENGTH_SHORT).show();
+                }
             }
-
             @Override
-            public void onFailure(Call<List<GetListResponse>> call, Throwable t) {
-
+            public void onFailure(Call<List<GetListResponse>> call, Throwable error) {
+                Toast.makeText(Main10Activity.this, "", Toast.LENGTH_SHORT).show();
+                if (error instanceof IOException) {
+                    Log.d("aaaa",""+error);
+                    //inform the user and possibly retry
+                    Toast.makeText(Main10Activity.this, "this is an actual network failure "+error, Toast.LENGTH_SHORT).show();
+                    // logging probably not necessary
+                } else {
+                    Toast.makeText(Main10Activity.this, "conversion issues :("+error, Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

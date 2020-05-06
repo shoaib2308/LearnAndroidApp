@@ -30,14 +30,14 @@ public class BaseActivity extends AppCompatActivity {
      * Overrides the pending Activity transition by performing the "Exit" animation.
      */
     protected void overridePendingTransitionExit() {
-        overridePendingTransition(R.anim.bottom_top, R.anim.bottom_down);
+        overridePendingTransition(R.anim.bottom_down1, R.anim.bottom_top1);
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
        // overridePendingTransitionExit();
-        overridePendingTransition(R.anim.bottom_top, R.anim.bottom_down);
+        overridePendingTransition(R.anim.bottom_down1, R.anim.bottom_top1);
     }
 
 }

@@ -438,7 +438,20 @@ public class MyUtils {
 
 
 
-
+    /**
+     * ConnectivityManager : Class that answers queries about the state of network connectivity.
+     * It also notifies applications when network connectivity changes.
+     * @url  https://developer.android.com/reference/android/net/ConnectivityManager
+     */
+    public static boolean isNetworkReachable(Context context) {
+        ConnectivityManager manager =
+                (ConnectivityManager) context.getSystemService(context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = manager.getActiveNetworkInfo();
+        if (networkInfo != null && networkInfo.isConnected()) {
+            return true;
+        }
+        return false;
+    }
 
 
 }

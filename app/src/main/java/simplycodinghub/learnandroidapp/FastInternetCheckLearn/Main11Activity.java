@@ -1,13 +1,9 @@
 package simplycodinghub.learnandroidapp.FastInternetCheckLearn;
 
 import android.animation.Animator;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -16,8 +12,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import simplycodinghub.learnandroidapp.R;
 
-public class Main11Activity extends AppCompatActivity {
-    private MyInternetConnectionReceiver myInternetConnectionReceiver;
+public class Main11Activity extends AppCompatActivity implements InternetConnectivityReceiver.ConnectivityReceiverListener{
+   // private MyInternetConnectionReceiver myInternetConnectionReceiver;
     private TextView internetStatus;
     private RelativeLayout rltConnection;
     @Override
@@ -26,8 +22,15 @@ public class Main11Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main11);
         internetStatus = (TextView) findViewById(R.id.txtMsgStatus);
         rltConnection = findViewById(R.id.rltConnection);
-        // Create a network change broadcast receiver.
-        myInternetConnectionReceiver = new MyInternetConnectionReceiver();
+
+        //Custom check Create a network change broadcast receiver.
+       //myInternetConnectionReceiver = new MyInternetConnectionReceiver(); // UNCOMMENT TO START
+
+        /**
+         * Auto Check for Internet Connection
+         * We are creating and Receive network change Broadcast receiver.
+         */
+        registerReceiver(new InternetConnectivityReceiver(), new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
 
     }
 
@@ -44,16 +47,25 @@ public class Main11Activity extends AppCompatActivity {
         // Add network connectivity change action.
         intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
         // Register the broadcast receiver with the intent filter object.
-        registerReceiver(myInternetConnectionReceiver, intentFilter);
+
+      //  registerReceiver(myInternetConnectionReceiver, intentFilter);  //UNCOMMENT TO START
+
+        InternetConnectivityReceiver.connectivityReceiverListener = this;
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        unregisterReceiver(myInternetConnectionReceiver);
+        //unregisterReceiver(myInternetConnectionReceiver);
     }
 
-    public class MyInternetConnectionReceiver extends BroadcastReceiver {
+    @Override
+    public void onNetworkConnectionChanged(Boolean isConnected) {
+        showMsgBar(isConnected);
+    }
+
+    // FOR CUSTOM CHECK INTERNET USING BROADCASTRECIEVER
+   /* public class MyInternetConnectionReceiver extends BroadcastReceiver {
 
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -63,7 +75,7 @@ public class Main11Activity extends AppCompatActivity {
             showMsgBar(netInfo != null && netInfo.isConnected());
 
         }
-    }
+    }*/
 
     /**
      *
