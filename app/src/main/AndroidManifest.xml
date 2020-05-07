@@ -21,13 +21,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".CheckInternetRetrofit.Main29Activity">
+        <activity android:name=".BestCodeRetrofit.Main30Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".SimpleInternetCheck.Main28Activity">
-
-        </activity>
-        <activity android:name=".AutoFetchMobileNo.Main27Activity"></activity>
+        <activity android:name=".CheckInternetRetrofit.Main29Activity"></activity>
+        <activity android:name=".SimpleInternetCheck.Main28Activity"></activity>
+        <activity android:name=".AutoFetchMobileNo.Main27Activity" />
         <activity android:name=".LearnSocket.BothServerSideActivity" />
         <activity android:name=".LearnSocket.BothClientSideActivity" />
         <activity android:name=".LearnSocket.ClientSideActivity" />
@@ -48,13 +51,7 @@
         <activity android:name=".CompassDirection.CompassActivity" />
         <activity android:name=".NamazTime.Main12Activity" />
         <activity android:name=".FastInternetCheckLearn.Main11Activity" />
-        <activity android:name=".RecyclerViewTutorial.Main10Activity" >
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".RecyclerViewTutorial.Main10Activity">
 
         </activity>
         <activity android:name=".RegisterRetrofit.Main9Activity" />

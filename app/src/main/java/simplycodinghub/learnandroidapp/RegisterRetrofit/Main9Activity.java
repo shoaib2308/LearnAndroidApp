@@ -14,9 +14,10 @@ import retrofit2.Response;
 import simplycodinghub.learnandroidapp.R;
 
 public class Main9Activity extends AppCompatActivity {
-EditText mobile;
-Button submit;
+    EditText mobile;
+    Button submit;
     IRestservice irestservice;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,10 +42,8 @@ Button submit;
         irestservice.getRegister(mMobile).enqueue(new Callback<RegisterResponse>() {
             @Override
             public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
-                Log.d("aaaaaaaaaaa", "onResponse: "+response);
-                Toast.makeText(Main9Activity.this, ""+response, Toast.LENGTH_SHORT).show();
-
-
+                Log.d("aaaaaaaaaaa", "onResponse: " + response);
+                Toast.makeText(Main9Activity.this, "" + response, Toast.LENGTH_SHORT).show();
             }
 
             @Override
