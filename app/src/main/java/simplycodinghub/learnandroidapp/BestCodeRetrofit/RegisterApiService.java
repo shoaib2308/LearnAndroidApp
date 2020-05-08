@@ -22,6 +22,13 @@ public class RegisterApiService implements Callback<RegisterResponse> {
     public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
         if (response.isSuccessful()) {
             networkListener.OnSuccess(response.body(), response.code(), 1);
+        }else{
+            networkListener.OnSuccess(response.errorBody(), response.code(), 1);
+            /**
+             * USE WHEN RESPONSE COME IN ERROR BODY
+             * APIError apiError = new Gson().fromJson(errorBody.charStream(), APIError.class);
+             */
+
         }
     }
 

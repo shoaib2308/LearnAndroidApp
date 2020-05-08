@@ -26,7 +26,9 @@ public class Main19Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main19);
         final RecyclerView userlist = (RecyclerView) findViewById(R.id.userlist);
         userlist.setLayoutManager(new LinearLayoutManager(this));
-        StringRequest request = new StringRequest(URL, new Response.Listener<String>() {
+
+        StringRequest request = new StringRequest(URL,
+                new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.d("aaa",response);
