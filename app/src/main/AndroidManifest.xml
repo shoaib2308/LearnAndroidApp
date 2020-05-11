@@ -45,8 +45,8 @@
         <activity android:name=".RegisterVolley.MainVolleyActivity" />
         <activity android:name=".SwipeViewPager.DetailActivity" />
         <activity android:name=".SwipeViewPager.Main18Activity" />
-        <activity android:name=".singularityautomation.Main17Activity" />
-        <activity android:name=".singularityautomation.Main16Activity" />
+        <activity android:name=".singulList.Main17Activity" />
+        <activity android:name=".singulList.Main16Activity" />
         <activity android:name=".LearnAlarmMananger.DailyNotification.Main15Activity" />
         <activity android:name=".LearnAlarmMananger.v12.Main14Activity" />
         <activity android:name=".LearnAlarmMananger.AlarmReceiverActivity" />

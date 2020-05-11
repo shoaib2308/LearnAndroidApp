@@ -1,4 +1,4 @@
-package simplycodinghub.learnandroidapp.singularityautomation;
+package simplycodinghub.learnandroidapp.singulList;
 
 import android.content.Context;
 import android.view.LayoutInflater;

@@ -17,7 +17,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     List<GetListResponse> getListResponses = new ArrayList<>();
     Context context;
-    simplycodinghub.learnandroidapp.singularityautomation.onClickInterface onClickInterface;
+    simplycodinghub.learnandroidapp.singulList.onClickInterface onClickInterface;
     public Adapter(Context context,List<GetListResponse> getListResponses) {
         this.getListResponses = getListResponses;
         this.context = context;

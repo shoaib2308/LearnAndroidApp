@@ -1,4 +1,4 @@
-package simplycodinghub.learnandroidapp.singularityautomation;
+package simplycodinghub.learnandroidapp.singulList;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

@@ -1,4 +1,4 @@
-package simplycodinghub.learnandroidapp.singularityautomation;
+package simplycodinghub.learnandroidapp.singulList;
 
 import android.content.Intent;
 import android.os.Bundle;

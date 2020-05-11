@@ -1,5 +1,5 @@
 
-package simplycodinghub.learnandroidapp.singularityautomation;
+package simplycodinghub.learnandroidapp.singulList;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
