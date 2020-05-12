@@ -22,11 +22,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".WebView.Main31Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".BestCodeRetrofit.Main30Activity">
 
@@ -39,7 +35,13 @@
         <activity android:name=".LearnSocket.ClientSideActivity" />
         <activity android:name=".LearnSocket.ServerSideActivity" />
         <activity android:name=".QuickBroadcast.Main22Activity" />
-        <activity android:name=".FirebaseAnalytics.Main21Activity" />
+        <activity android:name=".FirebaseAnalytics.Main21Activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".LearnBluetoothConnection.Main20Activity" />
         <activity android:name=".RecyclerViewVolley.Main19Activity" />
         <activity android:name=".RegisterVolley.MainVolleyActivity" />
