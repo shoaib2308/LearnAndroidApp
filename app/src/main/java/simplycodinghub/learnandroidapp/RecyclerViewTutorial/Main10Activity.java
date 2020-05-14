@@ -18,7 +18,7 @@ import simplycodinghub.learnandroidapp.R;
 import simplycodinghub.learnandroidapp.RegisterRetrofit.ApiClient;
 import simplycodinghub.learnandroidapp.RegisterRetrofit.IRestservice;
 
-public class Main10Activity extends AppCompatActivity {
+public class Main10Activity extends AppCompatActivity implements Adapter.onClickListener {
     IRestservice service;
     Adapter adapter;
     List<GetListResponse> getListResponses = new ArrayList<>();
@@ -29,9 +29,7 @@ public class Main10Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main10);
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.programmableList);
 
-
-
-        adapter = new Adapter(Main10Activity.this, getListResponses);
+        adapter = new Adapter(this, getListResponses);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
@@ -73,5 +71,10 @@ public class Main10Activity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         getList();
+    }
+
+    @Override
+    public void setOnClickListener(String userId) {
+        Toast.makeText(this, ""+userId, Toast.LENGTH_SHORT).show();
     }
 }

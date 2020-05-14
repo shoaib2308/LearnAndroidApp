@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +18,7 @@ public class Main9Activity extends AppCompatActivity {
     EditText mobile;
     Button submit;
     IRestservice irestservice;
+    TextView status;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,13 @@ public class Main9Activity extends AppCompatActivity {
 
         mobile = (EditText) findViewById(R.id.mobile);
         submit = (Button) findViewById(R.id.submit);
+        status = (TextView) findViewById(R.id.status);
+
+        /**
+         * Initialize viewModel
+         */
+
+
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -17,10 +17,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     List<GetListResponse> getListResponses = new ArrayList<>();
     Context context;
-    simplycodinghub.learnandroidapp.singulList.onClickInterface onClickInterface;
-    public Adapter(Context context,List<GetListResponse> getListResponses) {
+    onClickListener onClickListener;
+
+    public Adapter(onClickListener onClickListener,List<GetListResponse> getListResponses) {
         this.getListResponses = getListResponses;
-        this.context = context;
+        this.onClickListener = onClickListener;
     }
 
     @NonNull
@@ -35,7 +36,12 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     public void onBindViewHolder(@NonNull Adapter.ViewHolder holder, final int position) {
         final GetListResponse getListResponse =  getListResponses.get(position);
         holder.textView.setText(getListResponse.getJobId());
-
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onClickListener.setOnClickListener(getListResponse.getJobId());
+            }
+        });
     }
 
     @Override
@@ -50,4 +56,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             textView = itemView.findViewById(R.id.tv_text);
         }
     }
+
+    public interface onClickListener{
+        void setOnClickListener(String userId);
+    }
+
 }
