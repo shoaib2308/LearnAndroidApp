@@ -5,8 +5,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import simplycodinghub.learnandroidapp.MyUtils;
 import simplycodinghub.learnandroidapp.R;
-import simplycodinghub.learnandroidapp.Utils.MyUtils;
 
 public class Main28Activity extends AppCompatActivity {
     // Activity declaration of textviews

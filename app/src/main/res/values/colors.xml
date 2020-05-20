@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#063C6B</color>
+    <color name="colorPrimaryDark">#063C6B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="black">#000</color>
     <color name="transferent">#00000000</color>
+
+
+
+
+
+
+
+
+
+
+
+    <!--colors for modern ui-->
+    <color name="whiteTextColor">#fff</color>
+    <color name="blackTextColor">#000</color>
+
+    <color name="whiteCardColor">#fff</color>
+
+    <color name="darkModeBackground">#353567</color>
+    <color name="darkModeTextColor">#fff</color>
+    <color name="white">#ffffff</color>
+
+
 </resources>

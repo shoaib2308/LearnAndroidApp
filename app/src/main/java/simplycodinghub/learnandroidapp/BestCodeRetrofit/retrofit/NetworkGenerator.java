@@ -1,4 +1,4 @@
-package simplycodinghub.learnandroidapp.BestCodeRetrofit;
+package simplycodinghub.learnandroidapp.BestCodeRetrofit.retrofit;
 
 import java.util.concurrent.TimeUnit;
 

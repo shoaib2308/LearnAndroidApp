@@ -21,11 +21,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".PassObjectActivity.Main33Activity"></activity>
-        <activity android:name=".PassObjectActivity.Main32Activity" >
+        <activity android:name=".FullScreenPopUp.Main37Activity"/>
+        <activity
+            android:name=".AProjects.Home.HomeActivity"
+            android:theme="@style/BAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity android:name=".AProjects.Slider.Introslider2.Slider2Activity" />
+        <activity
+            android:name=".AProjects.Slider.IntroSlider.Slider1Activity"
+            android:theme="@style/AAppTheme"></activity>
+        <activity android:name=".BestCodeRetrofit.Main35Activity" />
+        <activity android:name=".RetrofitListViewModel.Main34Activity" />
+        <activity android:name=".PassObjectActivity.Main33Activity" />
+        <activity android:name=".PassObjectActivity.Main32Activity" />
         <activity android:name=".WebView.Main31Activity" />
         <activity android:name=".BestCodeRetrofit.Main30Activity" />
         <activity android:name=".CheckInternetRetrofit.Main29Activity" />
@@ -36,9 +49,7 @@
         <activity android:name=".LearnSocket.ClientSideActivity" />
         <activity android:name=".LearnSocket.ServerSideActivity" />
         <activity android:name=".QuickBroadcast.Main22Activity" />
-        <activity android:name=".FirebaseAnalytics.Main21Activity">
-
-        </activity>
+        <activity android:name=".FirebaseAnalytics.Main21Activity" />
         <activity android:name=".LearnBluetoothConnection.Main20Activity" />
         <activity android:name=".RecyclerViewVolley.Main19Activity" />
         <activity android:name=".RegisterVolley.MainVolleyActivity" />
@@ -53,13 +64,7 @@
         <activity android:name=".CompassDirection.CompassActivity" />
         <activity android:name=".NamazTime.Main12Activity" />
         <activity android:name=".FastInternetCheckLearn.Main11Activity" />
-        <activity android:name=".RecyclerViewTutorial.Main10Activity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".RecyclerViewTutorial.Main10Activity" />
         <activity android:name=".RegisterRetrofit.Main9Activity" />
         <activity android:name=".BroadcastActivity.SecondActivity" />
         <activity android:name=".BroadcastActivity.Main8Activity" />

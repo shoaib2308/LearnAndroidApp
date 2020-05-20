@@ -1,4 +1,4 @@
-package simplycodinghub.learnandroidapp.Utils;
+package simplycodinghub.learnandroidapp;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -29,9 +29,18 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 import androidx.appcompat.app.AlertDialog;
-import simplycodinghub.learnandroidapp.R;
 
 public class MyUtils {
+
+
+    static int ERROR_UNKNOWN=1;
+    static int ERROR_NO_INTERNET=2;
+
+
+
+
+
+
     /**
      * get date in UTC time format
      *

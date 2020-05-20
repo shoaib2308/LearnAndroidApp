@@ -1,0 +1,23 @@
+<FrameLayout android:id="@+id/banner_slider_img"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:elevation="4dp"
+    android:visibility="visible"
+    android:padding="12dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fillColor="#2fa7ea"
+        app:pageColor="#b2b2b2"
+        app:radius="3.2dp"
+        app:slideInterval="3000"
+        app:indicatorGravity="end"
+        app:strokeWidth="1dp"
+        />
+</FrameLayout>
+    <!--app:strokeColor="#081F2F"
+           app:strokeWidth="1.2dp"-->

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".AProjects.Slider.IntroSlider.Slider1Activity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_above="@+id/txt"
+            android:layout_marginBottom="30dp">
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="0dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo_food_delivery"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="306dp"
+                android:layout_gravity="center"
+                android:clipToPadding="false"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:id="@+id/viewPager">
+            </androidx.viewpager.widget.ViewPager>
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicator"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:ci_drawable="@drawable/ic_select_circle"
+                app:ci_drawable_unselected="@drawable/ic_unselect_circle"
+                app:ci_width="5dp"
+                app:ci_height="5dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login With Gmail"
+        android:textSize="12dp"
+        android:id="@+id/txt"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:background="@drawable/black_rect"
+        android:paddingTop="18.5dp"
+        android:paddingBottom="18.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginRight="27dp"
+        android:textAllCaps="false"
+        android:elevation="1dp" />
+
+</RelativeLayout>
