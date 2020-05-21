@@ -15,7 +15,7 @@
         android:orientation="vertical"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
-        android:paddingBottom="9dp">
+        android:paddingBottom="5dp">
 
 
         <TextView
@@ -24,69 +24,24 @@
             android:layout_weight="1"
             android:gravity="right"
             android:text="Outdoor Element"
-            android:textColor="@color/black"
-            android:textStyle="normal"
+            android:textColor="@color/txt_title"
+            android:textStyle="bold"
             android:textSize="17dp"
             />
 
     </LinearLayout>
 
-
-
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="1dp">
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="110dp"
-            android:gravity="center"
-            android:layout_marginLeft="7dp"
-            android:layout_height="110dp"
-            android:orientation="vertical">
+        android:id="@+id/recyclerView"
+        android:clipToPadding="false"
+        android:nestedScrollingEnabled="false"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="11dp"
+        android:paddingBottom="5dp">
+    </androidx.recyclerview.widget.RecyclerView>
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/category_3"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="110dp"
-            android:gravity="center"
-            android:layout_marginLeft="7dp"
-            android:layout_height="110dp"
-            android:elevation="10dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/category_3"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="110dp"
-            android:gravity="center"
-            android:layout_marginLeft="7dp"
-            android:layout_marginRight="7dp"
-            android:layout_height="110dp"
-            android:elevation="10dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/category_3"/>
-        </LinearLayout>
-
-
-
-
-    </LinearLayout>
 
 
 </LinearLayout>

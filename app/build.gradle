@@ -81,6 +81,9 @@ dependencies {
     implementation 'me.relex:circleindicator:1.2.1@aar'
     // carosel
     implementation 'com.synnapps:carouselview:0.1.4'
+    // shape
+    compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+
 
 
 }

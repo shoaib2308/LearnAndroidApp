@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginBottom="5dp"
+    android:background="#ffffff">
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:id="@+id/image"
+        android:scaleType="fitXY"
+        android:src="@drawable/food2"/>
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodName"
+        android:text="Fast Food"
+        android:textStyle="bold"
+        android:textColor="@color/txt_title"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="6dp"
+        android:textSize="13dp"/>
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/restNo"
+        android:textSize="11dp"
+        android:layout_marginTop="3dp"
+        android:paddingLeft="6dp"
+        android:paddingBottom="6dp"
+        android:textColor="@color/txt_sub_title"
+        android:text="74 Restaurant"/>
+</LinearLayout>

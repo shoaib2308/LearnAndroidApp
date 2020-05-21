@@ -12,11 +12,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:fillColor="#2fa7ea"
-        app:pageColor="#b2b2b2"
+        app:pageColor="@color/white"
         app:radius="3.2dp"
         app:slideInterval="3000"
         app:indicatorGravity="end"
         app:strokeWidth="1dp"
+        app:strokeColor="@color/white"
         />
 </FrameLayout>
     <!--app:strokeColor="#081F2F"

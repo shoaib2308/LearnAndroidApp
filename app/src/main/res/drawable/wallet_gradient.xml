@@ -8,13 +8,12 @@
 
         <!--<stroke android:width="1dp" android:color="@color/strok" />-->
 
-        <!--<solid android:color="#fff"/>
-        startcolor 081F2F-->
+        <solid android:color="#2874f0"/>
+        <!--startcolor 081F2F
         <gradient
-            android:endColor="#063C6B"
-            android:centerColor="#063C6B"
+            android:endColor="#318cf7"
             android:startColor="#063C6B"
-            android:angle="180"></gradient>
+            android:angle="180"></gradient>-->
 
     </shape>
 </inset>
